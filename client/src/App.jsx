@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import React from "react"
+import Uploader from "./components/Uploader"
 
 function App() {
-
   return (
     <div className="App">
-      <h1>my own drive</h1>
+      <Uploader />
     </div>
   )
 }
