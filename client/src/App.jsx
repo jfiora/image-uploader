@@ -1,5 +1,6 @@
 import React from "react"
-import Uploader from "./components/Uploader"
+import Uploader from "./components/Uploader/Uploader"
+import './styles/index.css';
 
 function App() {
   return (

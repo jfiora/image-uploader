@@ -1,0 +1,14 @@
+:root {
+    /* Constants for upload page. */
+    --font-family-uploader: 'Poppins';
+    --gray-title-uploader: #4f4f4f;
+    --gray-span-uploader: #828282;
+    --gray-label-uploader: #bdbdbd;
+    --blue-button-uploader: #2f80ed;
+    --background-file-uploader: #f6f8fb;
+    --background-border-uploader: #97bef4;
+    --gray-loading-uploader: #f2f2f2;
+    --green-success-uploader: #219653;
+
+    /* */
+}
