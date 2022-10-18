@@ -1,9 +1,50 @@
+.Uploader-container {
+    font-family: var(--font-family-uploader);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        '. header .'
+        '. label .'
+        '. dad-container .'
+        '. or .'
+        '. cs-container .';
+    row-gap: 3rem;
+}
 
+.Uploader-title {
+    grid-area: header;
+}
+
+.Uploader-form-label {
+    grid-area: label;
+}
+
+.Uploader-dad-container {
+    grid-area: dad-container;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid var(--background-border-uploader);
+    border-style: dashed;
+}
+
+.Uploader-or {
+    grid-area: or;
+}
+
+.Uploader-cs-container {
+    grid-area: cs-container;
+    cursor: pointer;
+    background-color: var(--blue-button-uploader);
+    padding: 0.9rem;
+    border-radius: 12px;
+    width: 9rem;
+}
 
 .Uploader-input {
     display: none;
 }
 
 .Uploader-input-label {
-    background-color: aqua;
+    color: white;
 }
