@@ -23,13 +23,16 @@ const Uploader = () => {
 
     return (
         <div className='Uploader-container'>
-            <h1 className='Uploader-title'>Upload your image</h1>
+            <h1 className='Uploader-title separator'>Upload your image</h1>
             <form className='Uploader-form' action='#'>
-                <span className='Uploader-form-label' htmlFor='file'>
+                <span className='Uploader-form-label separator' htmlFor='file'>
                     File should be Jpeg, Png...
                 </span>
 
-                <div className='Uploader-dad-container' {...getRootProps()}>
+                <div
+                    className='Uploader-dad-container separator'
+                    {...getRootProps()}
+                >
                     <img
                         src={image}
                         className='Uploader-input-image'
@@ -41,11 +44,13 @@ const Uploader = () => {
                         id='file'
                         accept='.jpg'
                     />{' '}
-                    <p className='Uploader-input-text'>Drop files here</p>
+                    <p className='Uploader-input-text'>
+                        Drag & Drop your image here
+                    </p>
                 </div>
 
-                <span className='Uploader-or'>Or</span>
-                <div className='Uploader-cs-container'>
+                <span className='Uploader-or separator'>Or</span>
+                <div className='Uploader-cs-container separator'>
                     <input
                         className='Uploader-input'
                         type='file'
@@ -57,7 +62,10 @@ const Uploader = () => {
                             send();
                         }}
                     />
-                    <label className='Uploader-input-label' htmlFor='file'>
+                    <label
+                        className='Uploader-input-label separator'
+                        htmlFor='file'
+                    >
                         Choose a file
                     </label>
                 </div>
