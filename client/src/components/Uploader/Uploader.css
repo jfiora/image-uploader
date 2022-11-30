@@ -86,3 +86,31 @@ body {
 .Uploader-input-label {
     color: white;
 }
+/* Progress bar */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    height: 7rem;
+}
+
+.loading div,
+span {
+    margin-left: 10%;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 0.5rem;
+    background: linear-gradient(var(--blue-button-uploader) 0 0) left/6rem 20px
+        no-repeat #ddd;
+    animation: pb 3s infinite linear;
+    border-radius: 20px;
+}
+@keyframes pb {
+    50% {
+        background-position: right;
+    }
+}
