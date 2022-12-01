@@ -4,19 +4,18 @@ import { useDropzone } from 'react-dropzone';
 import image from '../../assets/image.svg';
 
 const Uploader = () => {
-    const uploadUrl = import.meta.env.VITE_UPLOAD_URL + '/upload';
-    const [file, setFile] = useState();
+    const uploadUrl = import.meta.env.VITE_UPLOAD_URL;
     const [uploaded, setUploaded] = useState(false);
-    const { getRootProps, getInputProps } = useDropzone({
-        accept: 'image/*',
-        onDrop: (acceptedFiles) => {
-            console.log(acceptedFiles);
-            setFile(acceptedFiles[0]);
-            send();
-        },
-    });
+    // const { getRootProps, getInputProps } = useDropzone({
+    //     accept: 'image/*',
+    //     onDrop: (acceptedFiles) => {
+    //         console.log(acceptedFiles);
+    //         setFile(acceptedFiles[0]);
+    //         send();
+    //     },
+    // });
 
-    const send = (e) => {
+    const send = (file) => {
         const data = new FormData();
         data.append('file', file);
         postImage(uploadUrl, data);
@@ -35,7 +34,7 @@ const Uploader = () => {
                         File should be Jpeg, Png...
                     </span>
 
-                    <div
+                    {/* <div
                         className='Uploader-dad-container separator'
                         {...getRootProps()}
                     >
@@ -44,16 +43,11 @@ const Uploader = () => {
                             className='Uploader-input-image'
                             alt='dnd'
                         />
-                        <input
-                            {...getInputProps()}
-                            type='file'
-                            id='file'
-                            accept='.jpg'
-                        />{' '}
+                        <input {...getInputProps()} type='file' id='file' />{' '}
                         <p className='Uploader-input-text'>
                             Drag & Drop your image here
                         </p>
-                    </div>
+                    </div> */}
 
                     <span className='Uploader-or separator'>Or</span>
                     <div className='Uploader-cs-container separator'>
@@ -61,11 +55,9 @@ const Uploader = () => {
                             className='Uploader-input'
                             type='file'
                             id='file'
-                            accept='.jpg'
+                            accept='.png, .jpg, .jpeg'
                             onChange={(e) => {
-                                const image = e.target.files[0];
-                                setFile(image);
-                                send();
+                                send(e.target.files[0]);
                             }}
                         />
                         <label

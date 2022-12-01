@@ -1,9 +1,11 @@
 const express = require('express');
 const multer = require('multer');
+const cors = require('cors');
 const app = express();
 
 const PORT = process.env.PORT || 1337;
 
+app.use(cors());
 app.use(express.static('public'));
 app.use('/images', express.static('images'));
 
@@ -34,5 +36,5 @@ const uploadFile = (req, res) => {
 };
 
 app.post('/upload', uploadSingleFile, uploadFile, (req, res) => {
-    res.send('upload success');
+    res.status(201).send('success');
 });
