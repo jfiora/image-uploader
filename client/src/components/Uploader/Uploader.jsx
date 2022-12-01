@@ -6,14 +6,12 @@ import image from '../../assets/image.svg';
 const Uploader = () => {
     const uploadUrl = import.meta.env.VITE_UPLOAD_URL;
     const [uploaded, setUploaded] = useState(false);
-    // const { getRootProps, getInputProps } = useDropzone({
-    //     accept: 'image/*',
-    //     onDrop: (acceptedFiles) => {
-    //         console.log(acceptedFiles);
-    //         setFile(acceptedFiles[0]);
-    //         send();
-    //     },
-    // });
+    const { getRootProps, getInputProps } = useDropzone({
+        accept: 'image/*',
+        onDrop: (acceptedFiles) => {
+            send(acceptedFiles[0]);
+        },
+    });
 
     const send = (file) => {
         const data = new FormData();
@@ -34,7 +32,7 @@ const Uploader = () => {
                         File should be Jpeg, Png...
                     </span>
 
-                    {/* <div
+                    <div
                         className='Uploader-dad-container separator'
                         {...getRootProps()}
                     >
@@ -47,7 +45,7 @@ const Uploader = () => {
                         <p className='Uploader-input-text'>
                             Drag & Drop your image here
                         </p>
-                    </div> */}
+                    </div>
 
                     <span className='Uploader-or separator'>Or</span>
                     <div className='Uploader-cs-container separator'>
