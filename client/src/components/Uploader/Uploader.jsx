@@ -4,7 +4,7 @@ import { useDropzone } from 'react-dropzone';
 import image from '../../assets/image.svg';
 
 const Uploader = () => {
-    const uploadUrl = import.meta.env.VITE_UPLOAD_URL;
+    const uploadUrl = import.meta.env.VITE_UPLOAD_URL + '/upload';
     const [file, setFile] = useState();
     const [uploaded, setUploaded] = useState(false);
     const { getRootProps, getInputProps } = useDropzone({
