@@ -1,11 +1,10 @@
 import React from 'react';
 import checkIcon from '../../assets/checkIcon.svg';
+import useImageStore from '../../zustand/stores/useImageStore';
 
-const UploadedFile = ({ url }) => {
-    url =
-        'http://localhost:1337' +
-        '/images/1672709085696-MicrosoftTeams-image.png';
-    console.log(url);
+const UploadedFile = () => {
+    const photo = useImageStore((state) => state.photo);
+    const url = import.meta.env.VITE_HOST + photo;
     return (
         <div className='Uploader-container'>
             <section className='header-uploaded'>
