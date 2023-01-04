@@ -1,10 +1,7 @@
 import React from 'react';
 import checkIcon from '../../assets/checkIcon.svg';
-import useImageStore from '../../zustand/stores/useImageStore';
 
-const UploadedFile = () => {
-    const photo = useImageStore((state) => state.photo);
-    const url = import.meta.env.VITE_HOST + photo;
+const UploadedFile = ({ image }) => {
     return (
         <div className='Uploader-container'>
             <section className='header-uploaded'>
@@ -14,10 +11,10 @@ const UploadedFile = () => {
                 <span>Uploaded Successfully!</span>
             </section>
             <section className='image-uploaded'>
-                <img src={url}></img>
+                <img src={image}></img>
             </section>
             <section className='link-uploaded'>
-                <input value={url} readOnly></input>
+                <input value={image} readOnly></input>
                 <button
                     onClick={() => {
                         navigator.clipboard.writeText(url);

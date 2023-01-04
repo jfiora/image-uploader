@@ -1,7 +1,11 @@
 import * as Axios from 'axios';
 
-export const postImage = (uploadUrl, data) => {
-    Axios.post(uploadUrl, data)
-        .then((res) => console.log(res.data.fileName))
-        .catch((e) => console.log(e));
+export const postImage = async (uploadUrl, data) => {
+    try {
+        const response = await Axios.post(uploadUrl, data);
+        return response.data.fileName;
+    } catch (err) {
+        console.error(err);
+        return '';
+    }
 };

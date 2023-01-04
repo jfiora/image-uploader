@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { postImage } from '../../services/api';
 import { useDropzone } from 'react-dropzone';
 import image from '../../assets/image.svg';
+import useImageStore from '../../zustand/stores/useImageStore';
 
 const Uploader = () => {
     const uploadUrl = import.meta.env.VITE_UPLOAD_URL;
+    const setImage = useImageStore((state) => state.addImage);
     const [uploaded, setUploaded] = useState(false);
     const { getRootProps, getInputProps } = useDropzone({
         accept: 'image/*',
@@ -12,12 +14,17 @@ const Uploader = () => {
             send(acceptedFiles[0]);
         },
     });
+    const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-    const send = (file) => {
+    const send = async (file) => {
+        setUploaded(true);
         const data = new FormData();
         data.append('file', file);
-        postImage(uploadUrl, data);
-        setUploaded(true);
+        const postApiCall = postImage(uploadUrl, data);
+        await delay(2000);
+        postApiCall.then((res) => {
+            setImage(res);
+        });
     };
 
     {
