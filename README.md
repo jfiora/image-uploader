@@ -12,19 +12,25 @@ This project is
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/)
 
 The installation of the project is pretty much like any other Node base project. First of all clone the repository and install the dependences:
+  ```bash
         git clone git@github.com:jfiora/my-own-drive.git
         cd ./my-own-drive
         npm install
+  ```
 
 For the client we have to run these commands:
+```bash
         cd ./client
-        npm i
+        npm install
         npm run dev
+  ```
     
 And for the server:
+```bash
         cd ./server
-        npm i
+        npm install
         npm start
+ ```
     
  ## Live site
  
