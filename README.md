@@ -7,9 +7,9 @@ This main purpose of this project is to create an image(files in a near future) 
 
 #### You can drag and drop or just simply upload from your local folder the images
 
-![gif](https://im4.ezgif.com/tmp/ezgif-4-9d199d4929.gif)
+![ezgif-1-562f301e5f](https://user-images.githubusercontent.com/64290438/211402172-1ce57600-c0c1-4c46-b720-0cbafdd1ea9c.gif)
 
-<img src="https://user-images.githubusercontent.com/64290438/211343805-e87c9963-9cd8-4b7c-a0b6-574293b39df8.png" width="500">
+<img src="https://user-images.githubusercontent.com/64290438/211343805-e87c9963-9cd8-4b7c-a0b6-574293b39df8.png" width="600">
 
 #### Loading after upload an image
 ![image](https://user-images.githubusercontent.com/64290438/211343400-256a2b59-98d0-4ab8-9e29-f215af66de8a.png)
@@ -50,7 +50,7 @@ And for the server:
  
 Personally, I would recommend deploy the client site on a free platform such as [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
 
-In my own case, I have the application server running on my own home server(in order to serve the API, I strongly recommend [ngrok](https://ngrok.com/)) and the client up and running on vercel. I'm not sharing the url because I use it as a substitute of iCloud and I don't like to share any information of me.
+In my own case, I have the application server running on my own home server(in order to serve the API, I strongly recommend [ngrok](https://ngrok.com/)) and the client up and running on vercel. I'm not sharing the url because I use it as a substitute of iCloud and I don't like to share any information of mine.
 
 ## Technologies used
 <p float="left">
