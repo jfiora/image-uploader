@@ -1,6 +1,20 @@
 # Image Uploader
+ 
+This project is a image uploader application, created with ReactJS for the client and NodeJS for the API.
+This main purpose of this project is to create an image(files in a near future) uploader. It's a kind of substitute of known services such as [Google Photos](https://www.google.com/intl/es/photos/about/) or [iCloud](https://www.icloud.com/), where you can upload your own images from your computer or mobile from anywhere without taking care of how much space you have left.
 
-This project is 
+### Application Usage
+
+#### You can drag and drop or just simply upload from your local folder the images
+
+![gif](https://im4.ezgif.com/tmp/ezgif-4-9d199d4929.gif)
+
+<img src="https://user-images.githubusercontent.com/64290438/211343805-e87c9963-9cd8-4b7c-a0b6-574293b39df8.png" width="500">
+
+#### Loading after upload an image
+![image](https://user-images.githubusercontent.com/64290438/211343400-256a2b59-98d0-4ab8-9e29-f215af66de8a.png)
+
+#### Finally, you can see your image uploaded and also can copy to clipboard the url
 
 ## Development Environment (Local)
 
@@ -12,11 +26,11 @@ This project is
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/)
 
 The installation of the project is pretty much like any other Node base project. First of all clone the repository and install the dependences:
-  ```bash
+```bash
         git clone git@github.com:jfiora/my-own-drive.git
         cd ./my-own-drive
         npm install
-  ```
+```
 
 For the client we have to run these commands:
 ```bash
@@ -36,7 +50,7 @@ And for the server:
  
 Personally, I would recommend deploy the client site on a free platform such as [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
 
-In my own case, I have the application server running on my own home server and the client up and running on vercel. I'm not sharing the url because I use it as a substitute of iCloud and I don't like to share any information of me.
+In my own case, I have the application server running on my own home server(in order to serve the API, I strongly recommend [ngrok](https://ngrok.com/)) and the client up and running on vercel. I'm not sharing the url because I use it as a substitute of iCloud and I don't like to share any information of me.
 
 ## Technologies used
 <p float="left">
@@ -46,5 +60,5 @@ In my own case, I have the application server running on my own home server and 
     <img src="https://zustand-demo.pmnd.rs/favicon.ico" width="100">
 </p>
 
-This project is based on Image Uploader from Full-stack challenges series of devchallenges.io. You can see the original from [here](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx).
+This project is based on Image Uploader from Full-stack challenges series of [devchallenges.io](devchallenges.io). You can see the original from [here](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx).
 
