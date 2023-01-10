@@ -77,7 +77,7 @@ const Uploader = () => {
         ) : (
             <div className='Uploader-container loading'>
                 {' '}
-                <span>Uploading...</span>
+                <span className='uploading-span-progress'>Uploading...</span>
                 <div className='progress-bar'></div>
             </div>
         );

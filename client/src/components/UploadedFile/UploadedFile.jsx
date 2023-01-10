@@ -3,11 +3,11 @@ import checkIcon from '../../assets/checkIcon.svg';
 
 const UploadedFile = ({ image }) => {
     return (
-        <div className='Uploader-container'>
+        <div className='Uploader-container uploaded'>
             <section className='header-uploaded'>
-                <span>
+                <div className='header-uploaded-image'>
                     <img src={checkIcon}></img>
-                </span>
+                </div>
                 <span>Uploaded Successfully!</span>
             </section>
             <section className='image-uploaded'>
@@ -17,10 +17,10 @@ const UploadedFile = ({ image }) => {
                 <input value={image} readOnly></input>
                 <button
                     onClick={() => {
-                        navigator.clipboard.writeText(url);
+                        navigator.clipboard.writeText(image);
                     }}
                 >
-                    Copy link
+                    Copy Link
                 </button>
             </section>
         </div>

@@ -97,7 +97,7 @@ body {
 }
 
 .loading div,
-span {
+.uploading-span-progress {
     margin-left: 10%;
 }
 
