@@ -16,6 +16,8 @@ This main purpose of this project is to create an image(files in a near future) 
 
 #### Finally, you can see your image uploaded and also can copy to clipboard the url
 
+![finished uploader](https://user-images.githubusercontent.com/64290438/211631919-5b1a34ea-66c2-4c0f-9d36-d40a4c0d5048.png)
+
 ## Development Environment (Local)
 
 ### System Requirements
